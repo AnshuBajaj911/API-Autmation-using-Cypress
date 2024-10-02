@@ -1,0 +1,25 @@
+{
+  "name": "fancode-assignment",
+  "version": "1.0.0",
+  "description": "Fancode assignment to check for todos completion of users from fancode city",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=false,html=false,json=true",
+    "sendReport": "node cypress/mailHelper/sendReportViaEmail.js",
+    "fancodeAssignment": "npm run test && npm run sendReport"  
+  },
+  "author": "Anshu Bajaj anshuc3dual@gmail.com 9855569630",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.0",
+    "marge": "^1.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.15"
+  },
+  "type": "module"
+}
