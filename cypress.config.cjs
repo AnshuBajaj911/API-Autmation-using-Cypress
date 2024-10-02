@@ -30,7 +30,7 @@ module.exports = defineConfig({
   reporters: {
     mochawesome: {
       reportDir: "cypress/results", // Directory to store test results
-      overwrite: false, // Don't overwrite existing reports
+      overwrite: true, // Overwrite existing reports
       html: false, // Disable HTML report generation
       json: true, // Enable JSON report generation
     },
